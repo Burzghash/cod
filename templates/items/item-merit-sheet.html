@@ -1,0 +1,60 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/cod/images/merit-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+			<div class="resource">
+				<label>Rank</label>
+				<input
+					name="data.rank.value"
+					type="number"
+					value="{{data.rank.value}}"
+					min="{{data.rank.min}}"
+					data-dtype="Number"
+				/>
+			</div>
+
+			<div>
+				<p>Show on front page?</p>
+				<input
+					name="data.frontPage.value"
+					type="checkbox"
+					value="{{data.frontPage.value}}"
+					data-dtype="Boolean"
+					{{checked
+					data.frontPage.value}}
+				/>
+			</div>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<nav class="sheet-tabs tabs">
+		<a class="item active" data-tab="attributes">{{localize "Attributes"}}</a>
+		<a class="item" data-tab="description">{{localize "Description"}}</a>
+	</nav>
+
+	<section class="content sheet-body">
+		{{!-- Attributes Tab --}}
+		<div class="tab attributes" data-tab="attributes">
+			{{> "systems/cod/templates/items/parts/merit-attributes.html"}}
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-tab="description">
+			{{> "systems/cod/templates/items/parts/item-description.html"}}
+		</div>
+	</section>
+</form>

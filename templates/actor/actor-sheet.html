@@ -1,0 +1,147 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="{{data.splatSelect.value}} sheet-layout">
+		<div class="sheet-logo"></div>
+
+		<div class="character_pic">
+			<img
+				class="profile-img"
+				src="{{actor.img}}"
+				data-edit="img"
+				title="{{actor.name}}"
+			/>
+		</div>
+
+		<div class="header-details">
+			<h1 class="charname">{{actor.name}}</h1>
+			<div class="character-details">Age: {{data.details.age.value}}</div>
+			<div class="character-details">
+				Faction: {{data.details.faction.value}}
+			</div>
+			<div class="character-details">Virtue: {{data.details.virtue.value}}</div>
+			<div class="character-details">Vice: {{data.details.vice.value}}</div>
+			<br />
+			<div class="character-details concept">
+				Concept: {{data.details.concept.value}}
+			</div>
+			<br />
+			<div class="vamp-bg-block">
+				<div class="character-details">Clan:</div>
+				<label>{{data.vamp-bg.clan.value}}</label>
+				<div class="character-details">Virtue:</div>
+				<label>{{data.vamp-bg.virtue.value}}</label>
+				<div class="character-details">Vice:</div>
+				<label>{{data.vamp-bg.vice.value}}</label>
+				<div class="character-details">Bloodline:</div>
+				<div class="character-details">{{data.vamp-bg.bloodline.value}}</div>
+				<div class="character-details">Covenant:</div>
+				<label>{{data.vamp-bg.convenant.value}}</label>
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<!-- Tabs v2 -->
+		<section id="actor-tab-sections" class="sheet-body">
+			<nav
+				id="codprimarytabs"
+				class="sheet-tabs tabs"
+				ondragstart="return false;"
+				ondrop="return false;"
+			>
+				<a class="item active" data-tab="display">{{localize "Display"}}</a>
+				<a class="item" data-tab="main">{{localize "Main"}}</a>
+				<a class="item" data-tab="merits">{{localize "Merits"}}</a>
+				{{#ifEquals this.actor.data.splatSelect.value "vampire"}}
+				<a class="item" data-tab="vamptraits">{{localize "Vampiric Traits"}}</a>
+				{{/ifEquals}} {{#ifEquals this.actor.data.splatSelect.value "werewolf"}}
+				<a class="item" data-tab="wolftraits">{{localize "Werewolf Traits"}}</a>
+				{{/ifEquals}} {{#ifEquals this.actor.data.splatSelect.value "mage"}}
+				<a class="item" data-tab="magetraits">{{localize "Mage Traits"}}</a>
+				{{/ifEquals}}
+				<a class="item" data-tab="equipment">{{localize "Equipment"}}</a>
+				<a class="item" data-tab="status">{{localize "Status"}}</a>
+				<a class="item" data-tab="customrolls">{{localize "Custom Rolls"}}</a>
+				<a class="item" data-tab="extra">{{localize "Extra"}}</a>
+			</nav>
+
+			<section class="content">
+				<div
+					class="tab {{tabs.display.class}}"
+					data-tab="{{tabs.display.data}}"
+				>
+					{{> (tabs.display.template) }}
+				</div>
+
+				<div class="tab {{tabs.main.class}}" data-tab="{{tabs.main.data}}">
+					{{> (tabs.main.template) }}
+				</div>
+
+				<!-- If this is a vampire, set CSS class and data-tab accordingly -->
+				{{#ifEquals this.actor.data.splatSelect.value "vampire"}}
+				<div
+					class="tab {{tabs.vamptraits.class}}"
+					data-tab="{{tabs.vamptraits.data}}"
+				>
+					{{> (tabs.vamptraits.template) }}
+				</div>
+				{{/ifEquals}}
+
+				<!-- If this is a werewolf, set CSS class and data-tab accordingly -->
+				{{#ifEquals this.actor.data.splatSelect.value "werewolf"}}
+				<div
+					class="tab {{tabs.wolftraits.class}}"
+					data-tab="{{tabs.wolftraits.data}}"
+				>
+					{{> (tabs.wolftraits.template) }}
+				</div>
+				{{/ifEquals}}
+
+				<!-- If this is a mage, set CSS class and data-tab accordingly -->
+				{{#ifEquals this.actor.data.splatSelect.value "mage"}}
+				<div
+					class="tab {{tabs.magetraits.class}}"
+					data-tab="{{tabs.magetraits.data}}"
+				>
+					{{> (tabs.magetraits.template) }}
+				</div>
+				{{/ifEquals}}
+
+				<div class="tab {{tabs.merits.class}}" data-tab="{{tabs.merits.data}}">
+					{{> (tabs.merits.template) }}
+				</div>
+
+				<div
+					class="tab {{tabs.equipment.class}}"
+					data-tab="{{tabs.equipment.data}}"
+				>
+					{{> (tabs.equipment.template) }}
+				</div>
+
+				<div class="tab {{tabs.status.class}}" data-tab="{{tabs.status.data}}">
+					{{> (tabs.status.template) }}
+				</div>
+
+				<div class="tab {{tabs.rolls.class}}" data-tab="{{tabs.rolls.data}}">
+					{{> (tabs.rolls.template) }}
+				</div>
+
+				<div class="tab {{tabs.extra.class}}" data-tab="{{tabs.extra.data}}">
+					{{> (tabs.extra.template) }}
+				</div>
+			</section>
+		</section>
+
+		<div class="footer">
+			<div class="guide">
+				<span>
+					Attributes 5/4/3 • Skills 11/7/4 (+3 Specialties) • Merits 7 • Health
+					= Stamina + Size • Willpower = Resolve + Composure • Size = 5 for
+					adult humans<br />
+					Defense = Lowest of Dexterity or Wits + Athletics • Initiative Mod =
+					Dexterity + Composure • Speed = Strength + Dexterity + 5 • Starting
+					Integrity = 7</span
+				>
+			</div>
+		</div>
+	</div>
+</form>

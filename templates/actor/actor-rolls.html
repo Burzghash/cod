@@ -1,0 +1,73 @@
+<h2>Custom Rolls</h2>
+<div class="rolls-section">
+	<ol class="items-list">
+		{{#each data.rolls as |roll index|}}
+
+		<div></div>
+		<li class="rolls flexrow" data-index="{{index}}">
+			<div>
+				<label>Name</label>
+				<input class="roll-name" type="text" value="{{roll.name}}" />
+			</div>
+
+			<div class="attribute-selector roll primary">
+				<label>Attribute</label>
+				<select>
+					{{#select roll.primary}}
+					<option value="none">None</option>
+					{{#each ../data/sortedAttributes as |group key|}}
+					<optgroup label="{{key}}"
+						>" {{#each group as |attrName attrKey|}}
+						<option value="{{attrKey}}">{{attrName}}</option>
+						{{/each}}
+					</optgroup>
+					{{/each}} {{/select}}
+				</select>
+			</div>
+
+			<div class="attribute-selector roll secondary">
+				<label>Skill</label>
+				<select>
+					{{#select roll.secondary}}
+					<option value="none">None</option>
+					{{#each ../data/sortedSkills as |group key|}}
+					<optgroup label="{{key}}"
+						>" {{#each group as |skillName skillKey|}}
+						<option value="{{skillKey}}">{{skillName}}</option>
+						{{/each}}
+					</optgroup>
+					{{/each}} {{/select}}
+				</select>
+			</div>
+
+			<div class="attribute-selector roll modifier">
+				<label>Modifier</label>
+				<input type="text" value="{{roll.modifier}}" data-dtype="Number" />
+			</div>
+
+			<div class="attribute-selector roll exploder">
+				<label>Explode</label>
+				<select>
+					{{#select roll.exploder}}
+					<option value="none">None</option>
+					<option value="ten">10 Again</option>
+					<option value="nine">9 Again</option>
+					<option value="eight">8 Again</option>
+					{{/select}}
+				</select>
+			</div>
+
+			<button class="roll-button">Roll</button>
+			<div class="item-controls">
+				<a class="item-control roll-delete" title="Delete Roll"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+
+		<li>
+			<a class="item-add" data-item-type="roll">+ Add</a>
+		</li>
+	</ol>
+</div>

@@ -1,0 +1,30 @@
+{
+	"name": "cod",
+	"title": "Chronicles of Darkness",
+	"description": "A system for playing Chronicles of Darkness within Foundry Virtual Tabletop.",
+	"version": "0.49",
+	"minimumCoreVersion": "0.5.5",
+	"compatibleCoreVersion": "0.6.5",
+	"templateVersion": 2,
+	"author": "Buzghash",
+	"esmodules": ["module/cod.js"],
+	"styles": [
+		"styles/cod.css",
+		"styles/bubbles.css",
+		"styles/display.css",
+		"styles/edit-sheet.css",
+		"styles/header.css",
+		"styles/main.css",
+		"styles/nav.css",
+		"styles/sheet-header.css",
+		"styles/top-navigation.css"
+	],
+	"packs": [],
+	"socket": false,
+	"initiative": "1d10",
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"manifest": "https://raw.githubusercontent.com/Burzghash/cod/master/system.json",
+	"download": "https://github.com/Burzghash/cod/archive/master.zip",
+	"url": "https://github.com/Burzghash/cod"
+}

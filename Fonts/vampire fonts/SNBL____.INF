@@ -1,0 +1,27 @@
+FontName (SnellRoundhand-BlackScript)
+FullName (Snell Roundhand Black Script)
+AppleName (SnellRoundhand BlackScript)
+AppleFONDID 8903
+FamilyName (Snell Roundhand)
+version (001.001)
+isFixedPitch false
+CharacterSet (isoadobe)
+Encoding (StandardEncoding)
+ItalicAngle -40
+CapHeight 706
+UnderlinePosition -100
+UnderlineThickness 50
+StemWidth 108
+Serif false
+Pi false
+SuperiorBaseline 216
+MSMenuName (SnellRoundhand Script)
+VPMenuName (SnellRoundhand Script)
+WORDMenuName (SnellRoundhandScript)
+VPTypefaceID 3055
+VPStyle (B)
+PCFileNamePrefix (SNBL_)
+PCLTypefaceID 20562
+PCLStrokeWeight 5
+PCLStyle 1
+

@@ -1,0 +1,66 @@
+<h2>Werewolf Traits</h2>
+
+<div class="wolftraits-section">
+	<div class="item-header">Gifts</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.gifts as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="gift">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Rites</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.rites as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="rite">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Fetishes</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.fetishes as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="fetish">+ Add</a>
+		</li>
+	</ol>
+</div>

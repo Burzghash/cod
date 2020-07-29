@@ -1,0 +1,114 @@
+<div class="form-group">
+	<label class="label-text">{{data.attack.label}}</label>
+	<select name="data.attack.value" data-dtype="String">
+		{{#select data.attack.value}} {{#each attacks as |name key|}}
+		<option value="{{key}}">{{name}}</option>
+		{{/each}} {{/select}}
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.damage.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.damage.value"
+			value="{{data.damage.value}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.range.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			name="data.range.value"
+			placeholder="[short / med / far]"
+			value="{{data.range.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.clip.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			name="data.clip.value"
+			placeholder="[remaining / clip] [total]"
+			value="{{data.clip.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.initiative.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.initiative.value"
+			value="{{data.initiative.value}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group attribute-selector">
+	<label class="label-text">{{data.strength.label}}</label>
+	<select name="data.strength.value" data-dtype="String">
+		{{#select data.strength.value}}
+		<option value="zero" selected></option>
+		<option value="one">•</option>
+		<option value="two">••</option>
+		<option value="three">•••</option>
+		<option value="four">••••</option>
+		<option value="five">•••••</option>
+		{{/select}}
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.size.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.size.value"
+			value="{{data.size.value}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group attribute-selector">
+	<label class="label-text">{{data.availability.label}}</label>
+	<select name="data.availability.value" data-dtype="String">
+		{{#select data.availability.value}}
+		<option value="zero" selected></option>
+		<option value="one">•</option>
+		<option value="two">••</option>
+		<option value="three">•••</option>
+		<option value="four">••••</option>
+		<option value="five">•••••</option>
+		{{/select}}
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.tags.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			name="data.tags.value"
+			placeholder="[tags]"
+			value="{{data.tags.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>

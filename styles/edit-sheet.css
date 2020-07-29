@@ -1,0 +1,45 @@
+/* --------------- Edit Sheet Tabs --------------- */
+
+.cod.sheet .skills .skill-column .skill > input {
+    width: 40px;
+    height: 20px;
+    margin-top: 4px;
+    text-align: center;
+    font-family: inherit;
+}
+
+.attribute input {
+    width: 50px !important;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.edit-details-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 5px;
+    margin-top: 0px;
+}
+
+.edit-details {
+    width: 100%;
+}
+
+.edit-details .skill-section {
+    width: 100%;
+}
+
+.edit-details .skill-section .skill {
+    width: 40%;
+}
+
+.edit-details .skill-column {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 33%;
+    margin-top: 8px;
+    padding: 3px;
+    font-size: 13px;
+    line-height: 13px;
+}

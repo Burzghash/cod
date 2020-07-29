@@ -1,0 +1,149 @@
+<h2>Equipment</h2>
+<div class="equipment-section">
+	<div class="item-header">Weapons</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.weapons as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name weapon-roll">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="weapon">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Armor</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.armors as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="armor">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Equipment</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.equipments as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="equipment">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Vehicles</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.vehicles as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="vehicle">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Services</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.services as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="service">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Dread Powers</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.dreads as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="dread">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Numina</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.numinas as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<a class="item-name">{{item.name}}</a>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="numina">+ Add</a>
+		</li>
+	</ol>
+</div>

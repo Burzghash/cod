@@ -1,0 +1,44 @@
+<div class="form-group">
+	<label title="Modify the final dice pool">Modifier</label>
+	<input type="text" name="modifier" value="{{modifier}}" />
+</div>
+
+<div class="attribute-selector">
+	<label title="Select Attribute">Attribute</label>
+	<select name="attributeSelector">
+		{{#select defaultSelectionAtt}}
+		<option value="none">None</option>
+		{{#each attributes as |group key|}}
+		<optgroup label="{{key}}"
+			>" {{#each group as |attrName attrKey|}}
+			<option value="{{attrKey}}">{{attrName}}</option>
+			{{/each}}
+		</optgroup>
+		{{/each}} {{/select}}
+	</select>
+</div>
+
+<div class="skill-selector">
+	<label title="Select Skill">Skill</label>
+	<select name="skillSelector">
+		{{#select defaultSelectionSkill}}
+		<option value="none">None</option>
+		{{#each skills as |group key|}}
+		<optgroup label="{{key}}"
+			>" {{#each group as |skillName skillKey|}}
+			<option value="{{skillKey}}">{{skillName}}</option>
+			{{/each}}
+		</optgroup>
+		{{/each}} {{/select}}
+	</select>
+</div>
+
+<div class="exploder-selector">
+	<label for="exploderSelector" title="Select Explode Rules">Dice Rules</label>
+	<select name="exploderSelector">
+		<option value="none">None</option>
+		<option value="ten" selected>10 Again</option>
+		<option value="nine">9 Again</option>
+		<option value="eight">8 Again</option>
+	</select>
+</div>

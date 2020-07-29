@@ -1,0 +1,268 @@
+/* --------------- Display Page -- Attributes --------------- */
+/* Note: Bubbles styles are their own section */
+
+.attribute-type {
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.attribute {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.attribute-label {
+    position: relative;
+    display: block;
+    float: left;
+    width: 40%;
+    line-height: 12px;
+}
+
+.attribute-bubbles {
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.attribute .attribute-max-bubbles:before {
+    content: '○○○○○';
+    font-size: 20px;
+    position: absolute;
+    top: -8px;
+    color: #00000040;
+}
+
+.attribute .attribute-max-bubbles:after {
+    content: '○○○○○';
+    margin-left: 65px;
+    font-size: 20px;
+    position: absolute;
+    top: -8px;
+    color: #00000040;
+}
+
+.attribute .attribute-dot {
+    width: 12px;
+    color: rgb(64, 86, 134);
+    float: left;
+    z-index: 2;
+}
+
+.vampire .attribute .attribute-dot {
+    color: #782e22;
+}
+
+.attribute-dot:nth-child(5n + 6) {
+    border-left: 1px solid #b7b7b7;
+    margin-left: 1px;
+    padding-left: 2px;
+    width: 16px;
+}
+
+.attribute-categories {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+.attribute-task {
+    font-size: 30px;
+    line-height: 12px;
+    display: block;
+    padding: 10px;
+    width: 750px;
+    text-align: center;
+}
+
+.attribute_column1 {
+    display: block;
+    float: left;
+    width: 8%;
+    margin-left: 1%;
+}
+
+.attribute_column2,
+.attribute_column3,
+.attribute_column4 {
+    display: block;
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+    margin-top: 4%;
+    border-style: groove;
+}
+
+.attribute-section {
+    background-color: #e6e6e6;
+}
+
+.cod.sheet .main .attribute-section .attribute-categories {
+    width: 12%;
+}
+
+.cod.sheet .main .attribute-section .attribute-categories > span {
+    margin-top: 7px;
+
+}
+
+.cod.sheet .main .attribute-column .attribute {
+    display: grid;
+    grid-template-columns: 33% 53% 5%;
+    grid-gap: 5px;
+    margin-top: 0px;
+}
+
+/* --------------- Display Page -- Mid Columns --------------- */
+
+.mid_column1 {
+    display: block;
+    float: left;
+    width: 19%;
+    margin-right: 1%;
+    padding: 5px;
+}
+
+.mid_column2 {
+    display: block;
+    float: left;
+    width: 39%;
+    margin-right: 1%;
+    padding: 5px;
+}
+
+.mid_column3 {
+    display: block;
+    float: left;
+    width: 39%;
+    padding: 5px;
+}
+
+.display-skills {
+    background: #ffffff70;
+    color: #000000;
+}
+
+.display-skills h3 {
+    background: #e6e6e6;
+    text-align: center;
+}
+
+.altcolor {
+    background: #00000012;
+}
+
+.display-skills .skill-column {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 8px;
+    padding: 3px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.cod.sheet .display-skills .skills .skill-column .skill-type {
+    display: block;
+    text-align: center;
+    font-weight: 1000;
+    color: #191813;
+    height: 20px;
+    position: relative;
+    bottom: 0px;
+}
+
+.display-disciplines,
+.display-merits {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    background: #00000020;
+}
+
+.display-disciplines {
+    display: none;
+}
+.vampire .display-disciplines {
+    display: block;
+}
+
+.display-disciplines h3,
+.display-willpower h3,
+.display-merits h3,
+.display-other h3 {
+    background: #444;
+    color: #fff;
+    text-align: center;
+}
+
+.display-willpower,
+.vamp_bloodpotency {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+.display-willpower h4,
+.vamp_bloodpotency h4 {
+    text-transform: uppercase;
+}
+
+.display-willpower input {
+    width: 30px;
+}
+
+.cod.sheet .display-disciplines .items-list .item,
+.cod.sheet .display-merits .items-list .item {
+    height: 22px;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 0px 0;
+    border-bottom: 1px solid #782e2250;
+}
+
+.vamp_bloodpotency {
+    display: none;
+    line-height: 50px;
+}
+.vamp_bloodpotency input {
+    width: 10%;
+}
+.vampire .vamp_bloodpotency {
+    display: block;
+}
+
+.display-other .sheet-bubbles {
+    width: 50%;
+}
+.display-other input {
+    width: 30px;
+    font-size: 12px;
+    height: 18px;
+    margin-top: -2px;
+}
+
+.resource {
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    text-align: left;
+}
+.resource input {
+    width: 100px;
+}
+
+.vampire .display-other {
+    display: none;
+}
+
+/* Make the attribute boxes look better (for numerical inputs)*/
+
+input[type="number"] {
+    border-radius: 4px;
+    vertical-align: middle;
+    margin: auto;
+
+
+}

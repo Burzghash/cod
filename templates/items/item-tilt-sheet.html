@@ -1,0 +1,50 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/cod/images/tilt-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<nav class="sheet-tabs tabs">
+		<a class="item active" data-tab="description">{{localize "Description"}}</a>
+		<a class="item" data-tab="effect">{{localize "Effect"}}</a>
+		<a class="item" data-tab="cause">{{localize "Cause"}}</a>
+		<a class="item" data-tab="resolution">{{localize "Resolution"}}</a>
+	</nav>
+
+	<section class="content sheet-body">
+		{{!-- Description Tab --}}
+		<div class="tab description" data-tab="description">
+			{{> "systems/cod/templates/items/parts/item-description.html"}}
+		</div>
+
+		{{!-- Effect Tab --}}
+		<div class="tab effect" data-tab="effect">
+			{{> "systems/cod/templates/items/parts/item-effect.html"}}
+		</div>
+
+		{{!-- Cause Tab --}}
+		<div class="tab cause" data-tab="cause">
+			{{> "systems/cod/templates/items/parts/item-cause.html"}}
+		</div>
+
+		{{!-- Resolution Tab --}}
+		<div class="tab resolution" data-tab="resolution">
+			{{> "systems/cod/templates/items/parts/item-resolution.html"}}
+		</div>
+	</section>
+</form>

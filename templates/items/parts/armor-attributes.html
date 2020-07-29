@@ -1,0 +1,112 @@
+<div class="form-group">
+	<label class="label-text">{{data.grating.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.grating.value"
+			value="{{data.grating.value}}"
+			min="{{data.grating.min}}"
+			max="{{data.grating.max}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.brating.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.brating.value"
+			value="{{data.brating.value}}"
+			min="{{data.brating.min}}"
+			max="{{data.brating.max}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group attribute-selector">
+	<label class="label-text">{{data.strength.label}}</label>
+	<select name="data.strength.value" data-dtype="String">
+		{{#select data.strength.value}}
+		<option value="zero" selected></option>
+		<option value="one">•</option>
+		<option value="two">••</option>
+		<option value="three">•••</option>
+		<option value="four">••••</option>
+		<option value="five">•••••</option>
+		{{/select}}
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.def.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.def.value"
+			value="{{data.def.value}}"
+			min="{{data.def.min}}"
+			max="{{data.def.value}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.speed.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			type="number"
+			name="data.speed.value"
+			value="{{data.speed.value}}"
+			min="{{data.speed.min}}"
+			max="{{data.speed.max}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<div class="form-group attribute-selector">
+	<label class="label-text">{{data.availability.label}}</label>
+	<select name="data.availability.value" data-dtype="String">
+		{{#select data.availability.value}}
+		<option value="one" selected>•</option>
+		<option value="two">••</option>
+		<option value="three">•••</option>
+		<option value="four">••••</option>
+		<option value="five">•••••</option>
+		{{/select}}
+	</select>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.coverage.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			name="data.coverage.value"
+			placeholder="[head / torso / arms / legs]"
+			value="{{data.coverage.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
+
+<div class="form-group">
+	<label class="label-text">{{data.tags.label}}</label>
+	<div class="input-box">
+		<input
+			class="input-text"
+			name="data.tags.value"
+			placeholder="[tags]"
+			value="{{data.tags.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>

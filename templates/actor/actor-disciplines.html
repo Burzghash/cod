@@ -1,0 +1,22 @@
+<h2>Disciplines</h2>
+<div class="discipline-section">
+	<ol class="items-list">
+		{{#each actor.data.inventory.disciplines as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="discipline">+ Add</a>
+		</li>
+	</ol>
+</div>

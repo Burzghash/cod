@@ -1,0 +1,33 @@
+/* --------------- Tab Navigation --------------- */
+
+.cod.sheet .tabs {
+    flex: 0 0 40px;
+    border-top: 1px solid #191813;
+    border-bottom: 1px solid #191813;
+    color: #000000;
+    height: 28px;
+}
+
+.mortal nav#codprimarytabs.sheet-tabs.tabs {
+    background: #fffff;
+}
+.vampire nav#codprimarytabs.sheet-tabs.tabs {
+    background: #782e22;
+}
+
+.cod.sheet .tabs .item.active {
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.mortal nav#codprimarytabs.sheet-tabs.tabs .item.active {
+    color: #b0daf7;
+}
+.vampire nav#codprimarytabs.sheet-tabs.tabs .item.active {
+    color: #dadada;
+}
+
+.cod.sheet .tabs .item {
+    line-height: 28px;
+    font-weight: normal;
+}

@@ -1,0 +1,58 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/cod/images/mage-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+			<div class="resource">
+				<label>Level</label>
+				<input
+					type="String"
+					name="data.level.value"
+					placeholder="[level]"
+					value="{{data.level.value}}"
+					data-dtype="String"
+				/>
+			</div>
+			<div class="resource">
+				<label>Arcanum</label>
+				<input
+					type="String"
+					name="data.arcanum.value"
+					placeholder="[arcanum]"
+					value="{{data.arcanum.value}}"
+					data-dtype="String"
+				/>
+			</div>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<nav class="sheet-tabs tabs">
+		<a class="item active" data-tab="attributes">{{localize "Attributes"}}</a>
+		<a class="item" data-tab="description">{{localize "Description"}}</a>
+	</nav>
+
+	<section class="content sheet-body">
+		{{!-- Attributes Tab --}}
+		<div class="tab attributes" data-tab="attributes">
+			{{> "systems/cod/templates/items/parts/spell-attributes.html"}}
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-tab="description">
+			{{> "systems/cod/templates/items/parts/item-description.html"}}
+		</div>
+	</section>
+</form>

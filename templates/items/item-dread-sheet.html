@@ -1,0 +1,38 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/cod/images/dread-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+			<div class="resource">
+				<label>Rank</label>
+				<input
+					type="number"
+					name="data.rank.value"
+					value="{{data.rank.value}}"
+					min="{{data.rank.min}}"
+					data-dtype="Number"
+				/>
+			</div>
+		</div>
+	</header>
+
+	<section class="sheet-body">
+		{{!-- Description Tab --}}
+		<h3>Description</h3>
+		<div class="tab description">
+			{{> "systems/cod/templates/items/parts/item-description.html"}}
+		</div>
+	</section>
+</form>

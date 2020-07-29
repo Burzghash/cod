@@ -1,0 +1,109 @@
+/* --------------- Header --------------- */
+
+.cod.sheet .window-content {
+    padding: 0px;
+    background: #ffffff;
+    margin-bottom: 1px;
+}
+
+.sheet-layout {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: -5px;
+    height: 100%;
+}
+
+.mortal {
+    background: #fff url('mortal-border.jpg') top left;
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+.vampire {
+    background: #fff url('vampire-border.jpg') top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.werewolf {
+    background: #fff url('wolf-border.jpg') top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.mage {
+    background: #fff url('mage-border.jpg') top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sheet-logo {
+    background-size: 245px 100px;
+    width: 245px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mortal .sheet-logo {
+    background: url('mortal-logo.png');
+    background-repeat: no-repeat;
+}
+
+.vampire .sheet-logo {
+    background: url('vampire-logo.png');
+    background-repeat: no-repeat;
+}
+
+.werewolf .sheet-logo {
+    background: url('wolf-logo.png');
+    background-repeat: no-repeat;
+}
+
+.mage .sheet-logo {
+    background: url('mage-logo.png');
+    background-repeat: no-repeat;
+}
+
+.character_pic {
+    display: block;
+    float: left;
+    width: 140px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.character_pic .profile-img {
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.header-details {
+    display: block;
+    float: left;
+    width: 80%;
+}
+.character-details {
+    width: auto;
+    float: left;
+    padding-right: 15px;
+    margin-right: 5px;
+}
+
+.header-details .concept {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.vamp-bg-block {
+    display: none;
+}
+.vampire .vamp-bg-block {
+    display: block;
+}

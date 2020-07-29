@@ -1,0 +1,88 @@
+/* --------------- Sheet Bubbles --------------- */
+/* ●●●●●●●●●●●●●●● Sheet Bubbles ●●●●●●●●●●●●●●● */
+/* --------------- Sheet Bubbles --------------- */
+
+.sheet-bubbles,
+.skill-bubbles,
+.sheet-squares {
+    position: relative;
+    top: -5px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sheet-bubbles::before {
+    content: '●●●●● ‎●●●●●'; /* Insert content that looks like bullets */
+    font-size: 20px;
+    background: #191813;
+    background: linear-gradient(
+        90deg,
+        #000 var(--percent),
+        #00000020 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill-bubbles::before {
+    content: '●●●●●';
+    font-size: 20px;
+    background: #191813;
+    background: linear-gradient(
+        90deg,
+        #000 var(--percent),
+        #ffffff50 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sheet-squares::before {
+    content: '■■■■■ ‎■■■■■'; /* Insert content that looks like bullets */
+    font-size: 20px;
+    background: #191813;
+    background: linear-gradient(
+        90deg,
+        rgb(100, 123, 173) var(--percent),
+        #00000020 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vampire .sheet-squares::before {
+    background: linear-gradient(
+        90deg,
+        #782e22 var(--percent),
+        #00000020 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.display-skills .skill-bubbles {
+    top: 0px;
+}
+
+.display-skills .skill-bubbles::before {
+    content: '●●●●●';
+    font-size: 18px;
+    line-height: 13px;
+    background: linear-gradient(
+        90deg,
+        rgb(64, 86, 134) var(--percent),
+        #00000010 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vampire .display-skills .skill-bubbles::before {
+    background: linear-gradient(
+        90deg,
+        #782e22 var(--percent),
+        #00000010 var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

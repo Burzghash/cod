@@ -1,0 +1,56 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<header class="sheet-header">
+		<img
+			class="profile-img"
+			src="./systems/cod/images/weapon-symbol.png"
+			data-edit="img"
+			title="{{item.name}}"
+		/>
+		<div class="header-fields">
+			<h1 class="charname">
+				<input
+					name="name"
+					type="text"
+					value="{{item.name}}"
+					placeholder="Name"
+				/>
+			</h1>
+			<div class="resource">
+				<label>Quantity</label>
+				<input
+					type="number"
+					name="data.quantity.value"
+					value="{{data.quantity.value}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="resource">
+				<label>Weight</label>
+				<input
+					type="text"
+					name="data.weight.value"
+					value="{{data.weight.value}}"
+					data-dtype="String"
+				/>
+			</div>
+		</div>
+	</header>
+
+	<!-- Tabs V2-->
+	<nav class="sheet-tabs tabs">
+		<a class="item active" data-tab="attributes">{{localize "Attributes"}}</a>
+		<a class="item" data-tab="description">{{localize "Description"}}</a>
+	</nav>
+
+	<section class="content sheet-body">
+		{{!-- Attributes Tab --}}
+		<div class="tab attributes" data-tab="attributes">
+			{{> "systems/cod/templates/items/parts/weapon-attributes.html"}}
+		</div>
+
+		{{!-- Description Tab --}}
+		<div class="tab description" data-tab="description">
+			{{> "systems/cod/templates/items/parts/item-description.html"}}
+		</div>
+	</section>
+</form>

@@ -1,0 +1,45 @@
+<h2>Vampiric Traits</h2>
+
+<div class="vamptraits-section">
+	<div class="item-header">Disciplines</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.disciplines as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="discipline">+ Add</a>
+		</li>
+	</ol>
+
+	<div class="item-header">Devotions</div>
+	<ol class="items-list">
+		{{#each actor.data.inventory.devotions as |item id|}}
+		<li class="item flexrow" data-item-id="{{item._id}}">
+			<img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+			<h4 class="item-name">{{item.name}}</h4>
+			<div class="item-controls">
+				<a class="item-control item-edit" title="Edit Item"
+					><i class="fas fa-edit"></i
+				></a>
+				<a class="item-control item-delete" title="Delete Item"
+					><i class="fas fa-trash"></i
+				></a>
+			</div>
+		</li>
+		{{/each}}
+		<li>
+			<a class="item-add" data-item-type="devotion">+ Add</a>
+		</li>
+	</ol>
+</div>

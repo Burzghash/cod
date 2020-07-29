@@ -1,0 +1,658 @@
+<br />
+<div class="splatSelect">
+	<label class="label-text">{{data.splatSelect.label}}</label>
+	<select name="data.splatSelect.value" data-dtype="String">
+		{{#select data.splatSelect.value}} {{#each splats as |name key|}}
+		<option value="{{key}}">{{name}}</option>
+		{{/each}} {{/select}}
+	</select>
+</div>
+
+<div class="edit-details-grid">
+	<div class="edit-details">
+		Character Name<input
+			name="name"
+			type="text"
+			value="{{actor.name}}"
+			placeholder="Name"
+		/>
+	</div>
+	<div class="edit-details">
+		Mortal Age
+		<input
+			type="text"
+			name="data.details.age.value"
+			placeholder="Age"
+			value="{{data.details.age.value}}"
+			data-dtype="String"
+		/>
+	</div>
+	<div class="edit-details">
+		Concept<input
+			type="text"
+			name="data.details.concept.value"
+			placeholder="Concept"
+			value="{{data.details.concept.value}}"
+			data-dtype="String"
+		/>
+	</div>
+	<div class="edit-details">
+		Faction<input
+			type="text"
+			name="data.details.faction.value"
+			placeholder="Faction"
+			value="{{data.details.faction.value}}"
+			data-dtype="String"
+		/>
+	</div>
+	<div class="edit-details">
+		Virtue<input
+			type="text"
+			name="data.details.virtue.value"
+			placeholder="Virtue"
+			value="{{data.details.virtue.value}}"
+			data-dtype="String"
+		/>
+	</div>
+	<div class="edit-details">
+		Vice<input
+			type="text"
+			name="data.details.vice.value"
+			placeholder="Vice"
+			value="{{data.details.vice.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
+
+<div style="clear: both;"></div>
+
+<h2>Attributes</h2>
+<div class="attribute-section">
+	<div class="attribute-column attribute-categories">
+		<span class="attribute-type"></span>
+		<span class="attribute">Power</span>
+		<span class="attribute">Finesse</span>
+		<span class="attribute">Resistance</span>
+	</div>
+	<div class="attribute-column">
+		<span class="attribute-type">Mental</span>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="int">Intelligence</a></span>
+			<input
+				type="number"
+				name="data.attributes.int.value"
+				value="{{data.attributes.int.value}}"
+				min="{{data.attributes.int.min}}"
+				max="{{data.attributes.int.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="wits">Wits</a></span>
+			<input
+				type="number"
+				name="data.attributes.wits.value"
+				value="{{data.attributes.wits.value}}"
+				min="{{data.attributes.wits.min}}"
+				max="{{data.attributes.wits.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="res">Resolve</a></span>
+			<input
+				type="number"
+				name="data.attributes.res.value"
+				value="{{data.attributes.res.value}}"
+				min="{{data.attributes.res.min}}"
+				max="{{data.attributes.res.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+	</div>
+	<div class="attribute-column">
+		<span class="attribute-type">Physical</span>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="str">Strength</a></span>
+			<input
+				type="number"
+				name="data.attributes.str.value"
+				value="{{data.attributes.str.value}}"
+				min="{{data.attributes.str.min}}"
+				max="{{data.attributes.str.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="dex">Dexterity</a></span>
+			<input
+				type="number"
+				name="data.attributes.dex.value"
+				value="{{data.attributes.dex.value}}"
+				min="{{data.attributes.dex.min}}"
+				max="{{data.attributes.dex.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="sta">Stamina</a></span>
+			<input
+				type="number"
+				name="data.attributes.sta.value"
+				value="{{data.attributes.sta.value}}"
+				min="{{data.attributes.sta.min}}"
+				max="{{data.attributes.sta.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+	</div>
+	<div class="attribute-column">
+		<span class="attribute-type">Social</span>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="pre">Presence</a></span>
+			<input
+				type="number"
+				name="data.attributes.pre.value"
+				value="{{data.attributes.pre.value}}"
+				min="{{data.attributes.pre.min}}"
+				max="{{data.attributes.pre.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="man">Manipulation</a></span>
+			<input
+				type="number"
+				name="data.attributes.man.value"
+				value="{{data.attributes.man.value}}"
+				min="{{data.attributes.man.min}}"
+				max="{{data.attributes.man.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+		<div class="attribute">
+			<span><a class="roll-pool" data-skill="com">Composure</a></span>
+			<input
+				type="number"
+				name="data.attributes.com.value"
+				value="{{data.attributes.com.value}}"
+				min="{{data.attributes.com.min}}"
+				max="{{data.attributes.com.max}}"
+				data-dtype="Number"
+			/>
+		</div>
+	</div>
+</div>
+
+<div class="extra">
+	<div class="conditions">
+		<div class="conditions-title">
+			<span>Conditions</span>
+		</div>
+		<input
+			type="text"
+			name="data.status.conditions.condition1.value"
+			value="{{data.status.conditions.condition1.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.status.conditions.condition2.value"
+			value="{{data.status.conditions.condition2.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.status.conditions.condition3.value"
+			value="{{data.status.conditions.condition3.value}}"
+			data-dtype="String"
+		/>
+	</div>
+
+	<div class="aspirations">
+		<div class="aspirations-title">
+			<span>Aspirations</span>
+		</div>
+		<input
+			type="text"
+			name="data.details.aspirations.aspiration1.value"
+			value="{{data.details.aspirations.aspiration1.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.aspirations.aspiration2.value"
+			value="{{data.details.aspirations.aspiration2.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.aspirations.aspiration3.value"
+			value="{{data.details.aspirations.aspiration3.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
+
+<div class="extra2">
+	<div class="size extra-value">
+		<span>Size</span>
+		<input
+			type="number"
+			name="data.advantages.size.value"
+			value="{{data.advantages.size.value}}"
+			min="{{data.advantages.size.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="speed extra-value">
+		<span>Speed</span>
+		<input
+			type="number"
+			name="data.advantages.speed.value"
+			value="{{data.advantages.speed.value}}"
+			min="{{data.advantages.speed.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="defense extra-value">
+		<span>Defense</span>
+		<input
+			type="number"
+			name="data.advantages.def.value"
+			value="{{data.advantages.def.value}}"
+			min="{{data.advantages.def.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="armor extra-value">
+		<span>Armor (G/B)</span>
+		<input
+			type="number"
+			name="data.advantages.garmor.value"
+			value="{{data.advantages.garmor.value}}"
+			min="{{data.advantages.garmor.min}}"
+			data-dtype="Number"
+		/>
+		<span>/</span>
+		<input
+			type="number"
+			name="data.advantages.barmor.value"
+			value="{{data.advantages.barmor.value}}"
+			min="{{data.advantages.barmor.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="initiative extra-value">
+		<span>Initiative</span>
+		<input
+			type="number"
+			name="data.advantages.initiative.value"
+			value="{{data.advantages.initiative.value}}"
+			min="{{data.advantages.initiative.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="exp extra-value">
+		<span>Experience</span>
+		<input
+			type="number"
+			name="data.advancement.exp.value"
+			value="{{data.advancement.exp.value}}"
+			min="{{data.advancement.exp.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+
+	<div class="beats extra-value">
+		<span>Beats</span>
+		<input
+			type="number"
+			name="data.advancement.beats.value"
+			value="{{data.advancement.beats.value}}"
+			min="{{data.advancement.beats.min}}"
+			data-dtype="Number"
+		/>
+	</div>
+</div>
+
+<h2>Skills</h2>
+<div class="edit-details">
+	<div class="skill-section">
+		<div class="skill-column">
+			<span class="skill-type">Mental (-3 unskilled)</span>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="academics">Academics</a></span>
+				<input
+					type="number"
+					name="data.skills.academics.value"
+					value="{{data.skills.academics.value}}"
+					min="{{data.skills.academics.min}}"
+					max="{{data.skills.academics.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="computer">Computer</a></span>
+				<input
+					type="number"
+					name="data.skills.computer.value"
+					value="{{data.skills.computer.value}}"
+					min="{{data.skills.computer.min}}"
+					max="{{data.skills.computer.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="crafts">Crafts</a></span>
+				<input
+					type="number"
+					name="data.skills.crafts.value"
+					value="{{data.skills.crafts.value}}"
+					min="{{data.skills.crafts.min}}"
+					max="{{data.skills.crafts.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span
+					><a class="roll-pool" data-skill="investigation"
+						>Investigation</a
+					></span
+				>
+				<input
+					type="number"
+					name="data.skills.investigation.value"
+					value="{{data.skills.investigation.value}}"
+					min="{{data.skills.investigation.min}}"
+					max="{{data.skills.investigation.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="medicine">Medicine</a></span>
+				<input
+					type="number"
+					name="data.skills.medicine.value"
+					value="{{data.skills.medicine.value}}"
+					min="{{data.skills.medicine.min}}"
+					max="{{data.skills.medicine.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="occult">Occult</a></span>
+				<input
+					type="number"
+					name="data.skills.occult.value"
+					value="{{data.skills.occult.value}}"
+					min="{{data.skills.occult.min}}"
+					max="{{data.skills.occult.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="politics">Politics</a></span>
+				<input
+					type="number"
+					name="data.skills.politics.value"
+					value="{{data.skills.politics.value}}"
+					min="{{data.skills.politics.min}}"
+					max="{{data.skills.politics.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="science">Science</a></span>
+				<input
+					type="number"
+					name="data.skills.science.value"
+					value="{{data.skills.science.value}}"
+					min="{{data.skills.science.min}}"
+					max="{{data.skills.science.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+		</div>
+		<div class="skill-column">
+			<span class="skill-type">Physical (-1 unskilled)</span>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="athletics">Athletics</a></span>
+				<input
+					type="number"
+					name="data.skills.athletics.value"
+					value="{{data.skills.athletics.value}}"
+					min="{{data.skills.athletics.min}}"
+					max="{{data.skills.athletics.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="brawl">Brawl</a></span>
+				<input
+					type="number"
+					name="data.skills.brawl.value"
+					value="{{data.skills.brawl.value}}"
+					min="{{data.skills.brawl.min}}"
+					max="{{data.skills.brawl.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="drive">Drive</a></span>
+				<input
+					type="number"
+					name="data.skills.drive.value"
+					value="{{data.skills.drive.value}}"
+					min="{{data.skills.drive.min}}"
+					max="{{data.skills.drive.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="firearms">Firearms</a></span>
+				<input
+					type="number"
+					name="data.skills.firearms.value"
+					value="{{data.skills.firearms.value}}"
+					min="{{data.skills.firearms.min}}"
+					max="{{data.skills.firearms.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="larceny">Larceny</a></span>
+				<input
+					type="number"
+					name="data.skills.larceny.value"
+					value="{{data.skills.larceny.value}}"
+					min="{{data.skills.larceny.min}}"
+					max="{{data.skills.larceny.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="stealth">Stealth</a></span>
+				<input
+					type="number"
+					name="data.skills.stealth.value"
+					value="{{data.skills.stealth.value}}"
+					min="{{data.skills.stealth.min}}"
+					max="{{data.skills.stealth.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="survival">Survival</a></span>
+				<input
+					type="number"
+					name="data.skills.survival.value"
+					value="{{data.skills.survival.value}}"
+					min="{{data.skills.survival.min}}"
+					max="{{data.skills.survival.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="weaponry">Weaponry</a></span>
+				<input
+					type="number"
+					name="data.skills.weaponry.value"
+					value="{{data.skills.weaponry.value}}"
+					min="{{data.skills.weaponry.min}}"
+					max="{{data.skills.weaponry.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+		</div>
+		<div class="skill-column">
+			<span class="skill-type">Social (-1 unskilled)</span>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="animalken">Animal Ken</a></span>
+				<input
+					type="number"
+					name="data.skills.animalken.value"
+					value="{{data.skills.animalken.value}}"
+					min="{{data.skills.animalken.min}}"
+					max="{{data.skills.animalken.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="empathy">Empathy</a></span>
+				<input
+					type="number"
+					name="data.skills.empathy.value"
+					value="{{data.skills.empathy.value}}"
+					min="{{data.skills.empathy.min}}"
+					max="{{data.skills.empathy.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="expression">Expression</a></span>
+				<input
+					type="number"
+					name="data.skills.expression.value"
+					value="{{data.skills.expression.value}}"
+					min="{{data.skills.expression.min}}"
+					max="{{data.skills.expression.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span
+					><a class="roll-pool" data-skill="intimidation">Intimidation</a></span
+				>
+				<input
+					type="number"
+					name="data.skills.intimidation.value"
+					value="{{data.skills.intimidation.value}}"
+					min="{{data.skills.intimidation.min}}"
+					max="{{data.skills.intimidation.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="persuasion">Persuasion</a></span>
+				<input
+					type="number"
+					name="data.skills.persuasion.value"
+					value="{{data.skills.persuasion.value}}"
+					min="{{data.skills.persuasion.min}}"
+					max="{{data.skills.persuasion.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="socialize">Socialize</a></span>
+				<input
+					type="number"
+					name="data.skills.socialize.value"
+					value="{{data.skills.socialize.value}}"
+					min="{{data.skills.socialize.min}}"
+					max="{{data.skills.socialize.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="streetwise">Streetwise</a></span>
+				<input
+					type="number"
+					name="data.skills.streetwise.value"
+					value="{{data.skills.streetwise.value}}"
+					min="{{data.skills.streetwise.min}}"
+					max="{{data.skills.streetwise.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+			<div class="skill">
+				<span><a class="roll-pool" data-skill="subterfuge">Subterfuge</a></span>
+				<input
+					type="number"
+					name="data.skills.subterfuge.value"
+					value="{{data.skills.subterfuge.value}}"
+					min="{{data.skills.subterfuge.min}}"
+					max="{{data.skills.subterfuge.max}}"
+					data-dtype="Number"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="special">
+	<div class="specializations">
+		<div class="specializations-title">
+			<span>Specializations</span>
+		</div>
+		<input
+			type="text"
+			name="data.details.specialties.specialty1.value"
+			value="{{data.details.specialties.specialty1.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.specialties.specialty2.value"
+			value="{{data.details.specialties.specialty2.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.specialties.specialty3.value"
+			value="{{data.details.specialties.specialty3.value}}"
+			data-dtype="String"
+		/>
+	</div>
+
+	<div class="other">
+		<div class="other-title">
+			<span>Other</span>
+		</div>
+		<input
+			type="text"
+			name="data.details.others.other1.value"
+			value="{{data.details.others.other1.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.others.other2.value"
+			value="{{data.details.others.other2.value}}"
+			data-dtype="String"
+		/>
+		<input
+			type="text"
+			name="data.details.others.other3.value"
+			value="{{data.details.others.other3.value}}"
+			data-dtype="String"
+		/>
+	</div>
+</div>
