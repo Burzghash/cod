@@ -24,28 +24,11 @@ export class ActorCoD extends Actor {
 		const data = actorData.data;
 		const attributeList = duplicate(CONFIG.attributes);
 		const skillsList = duplicate(CONFIG.skills);
-
-		const wits = data.attributes.wits;
-		const res = data.attributes.res;
-		const str = data.attributes.str;
-		const dex = data.attributes.dex;
-		const sta = data.attributes.sta;
-		const com = data.attributes.com;
+		const {wits, res, str, dex, sta, com} = data.attributes;
 
 		const athletics = data.skills.athletics;
-
-		const hp = data.advantages.hp;
-		const wp = data.advantages.wp;
-		const integrity = data.advantages.integrity;
-		const size = data.advantages.size;
-		const speed = data.advantages.speed;
-		const def = data.advantages.def;
-		const garmor = data.advantages.garmor;
-		const barmor = data.advantages.barmor;
-		const initiative = data.advantages.initiative;
-
-		const exp = data.advancement.exp;
-		const beats = data.advancement.beats;
+		const {hp, wp, integrity, size, speed, def, garmor, barmor, initiative} = data.advantages;
+		const {exp, beats} = data.advancement;
 
 		// Check to see if current HP/WP > max, correct if so
 		if (hp.value > hp.max) hp.value = hp.max;
@@ -292,7 +275,7 @@ export class ActorCoD extends Actor {
 		}
 		console.log(`Weapon roll: ${attribute}, ${skill}`);
 		console.log(`Target: ${target}`);
-		if (target == 'none')
+		if (target === 'none')
 			rollString = `<b>${name}</b> attacks with <b>${weapon}</b>! (${damage} dmg)`;
 		else
 			rollString = `<b>${name}</b> attacks <b>${target}</b> with <b>${weapon}</b>! (${damage} dmg)`;

@@ -33,8 +33,8 @@ export class CoDItemSheet extends ItemSheet {
 
 	getData() {
 		const data = super.getData();
-		if (this.item.type == 'weapon') data['attacks'] = CONFIG.attacks;
-		if (this.item.type == 'merit')
+		if (this.item.type === 'weapon') data['attacks'] = CONFIG.attacks;
+		if (this.item.type === 'merit')
 			data['meritGroups'] = CONFIG.universalMeritGroups;
 		console.log(`Current state of item-sheet data:`);
 		console.log(data);

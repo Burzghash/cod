@@ -122,59 +122,61 @@ export class ActorSheetCoD extends ActorSheet {
 		const inventory = actorData.data.inventory;
 
 		for (let i of actorData.items) {
-			if (i.type == 'weapon') {
-				inventory.weapons.push(i);
-			}
-			if (i.type == 'armor') {
-				inventory.armors.push(i);
-			}
-			if (i.type == 'equipment') {
-				inventory.equipments.push(i);
-			}
-			if (i.type == 'vehicle') {
-				inventory.vehicles.push(i);
-			}
-			if (i.type == 'service') {
-				inventory.services.push(i);
-			}
-			if (i.type == 'merit') {
-				inventory.merits.push(i);
-			}
-			if (i.type == 'discipline') {
-				inventory.disciplines.push(i);
-			}
-			if (i.type == 'devotion') {
-				inventory.devotions.push(i);
-			}
-			if (i.type == 'gift') {
-				inventory.gifts.push(i);
-			}
-			if (i.type == 'rite') {
-				inventory.rites.push(i);
-			}
-			if (i.type == 'fetish') {
-				inventory.fetishes.push(i);
-			}
-			if (i.type == 'spell') {
-				inventory.spells.push(i);
-			}
-			if (i.type == 'attainment') {
-				inventory.attainments.push(i);
-			}
-			if (i.type == 'magical tool') {
-				inventory.magicaltools.push(i);
-			}
-			if (i.type == 'condition') {
-				inventory.conditions.push(i);
-			}
-			if (i.type == 'tilt') {
-				inventory.tilts.push(i);
-			}
-			if (i.type == 'dread') {
-				inventory.dreads.push(i);
-			}
-			if (i.type == 'numina') {
-				inventory.numinas.push(i);
+			switch (i.type) {
+				case 'weapon':
+					inventory.weapons.push(i);
+					break;
+				case 'armor':
+					inventory.armors.push(i);
+					break;
+				case 'equipment':
+					inventory.equipments.push(i);
+					break;
+				case 'vehicle':
+					inventory.vehicles.push(i);
+					break;
+				case 'service':
+					inventory.services.push(i);
+					break;
+				case 'merit':
+					inventory.merits.push(i);
+					break;
+				case 'discipline':
+					inventory.disciplines.push(i);
+					break;
+				case 'devotion':
+					inventory.devotions.push(i);
+					break;
+				case 'gift':
+					inventory.gifts.push(i);
+					break;
+				case 'rite':
+					inventory.rites.push(i);
+					break;
+				case 'fetish':
+					inventory.fetishes.push(i);
+					break;
+				case 'spell':
+					inventory.spells.push(i);
+					break;
+				case 'attainment':
+					inventory.attainments.push(i);
+					break;
+				case 'magical tool':
+					inventory.magicaltools.push(i);
+					break;
+				case 'condition':
+					inventory.conditions.push(i);
+					break;
+				case 'tilt':
+					inventory.tilts.push(i);
+					break;
+				case 'dread':
+					inventory.dreads.push(i);
+					break;
+				case 'numina':
+					inventory.numinas.push(i);
+					break;
 			}
 		}
 	}

@@ -38,15 +38,15 @@ Hooks.once('init', async function () {
 	Items.registerSheet('core', CoDItemSheet, {types: [], makeDefault: true});
 
 	// Preload Handlebars Templates
-	preloadHandlebarsTemplates();
+	await preloadHandlebarsTemplates();
 });
 
 // Register handlebar helpers
 
 // Repetaer
 Handlebars.registerHelper('repeat', (n, block) => {
-	var accum = '';
-	for (var i = 0; i < n; i++) {
+	let accum = '';
+	for (let i = 0; i < n; i++) {
 		block.data.index = i;
 		accum += block.fn(this);
 	}
