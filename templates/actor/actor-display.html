@@ -1,517 +1,519 @@
 <div class="display-page">
-	<div class="attribute-section">
-		<div class="attribute_column1">
-			<div class="attribute-categories">
-				<a class="att-roll-pool"
-					><div class="attribute-task">Attribute<br />Task Roll</div></a
-				>
-			</div>
-			<div class="attribute-categories">Power</div>
-			<div class="attribute-categories">Finesse</div>
-			<div class="attribute-categories">Resistance</div>
-		</div>
+    <a class="att-roll-pool">
+        <div class="attribute-task">Attribute<br/>Task Roll</div>
+    </a>
+    <div class="attribute-section">
+        <div class="attribute_column1">
 
-		<div class="attribute_column2">
-			<span class="attribute-type">Mental</span>
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="int">Intelligence</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.int as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+            <div class="attribute-categories">
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="wits">Wits</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.wits as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+            </div>
+            <div class="attribute-categories">Power</div>
+            <div class="attribute-categories">Finesse</div>
+            <div class="attribute-categories">Resistance</div>
+        </div>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="res">Resolve</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.res as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
-		</div>
+        <div class="attribute_column2">
+            <span class="attribute-type">Mental</span>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="int">Intelligence</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.int as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-		<div class="attribute_column3">
-			<span class="attribute-type">Physical</span>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="wits">Wits</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.wits as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="str">Strength</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.str as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="res">Resolve</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.res as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="dex">Dexterity</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.dex as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+        <div class="attribute_column3">
+            <span class="attribute-type">Physical</span>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="sta">Stamina</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.sta as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
-		</div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="str">Strength</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.str as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-		<div class="attribute_column4">
-			<span class="attribute-type">Social</span>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="dex">Dexterity</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.dex as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="pre">Presence</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.pre as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="sta">Stamina</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.sta as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="man">Manipulation</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.man as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
+        <div class="attribute_column4">
+            <span class="attribute-type">Social</span>
 
-			<div class="attribute">
-				<div class="attribute-label">
-					<a class="roll-pool" data-skill="com">Composure</a>
-				</div>
-				<div class="attribute-max-bubbles"></div>
-				<div class="attribute-bubbles">
-					{{#each actor.data.dots.attDots.com as |item id|}}
-					<div class="attribute-dot">●</div>
-					{{/each}}
-				</div>
-				<div style="clear: both;"></div>
-			</div>
-		</div>
-	</div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="pre">Presence</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.pre as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-	<div style="clear: both;"></div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="man">Manipulation</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.man as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 
-	<!-- Skills Column -->
-	<div class="mid_column1">
-		<div class="display-skills">
-			<h3>Skills</h3>
-			<div class="skill-section skills">
-				<div class="skill-column">
-					<span class="skill-type">Mental (-3 unskilled)</span>
-					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="academics">Academics</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.academics.value}} / 5 * 100%);"
-							>{{data.skills.academics.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="computer">Computer</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.computer.value}} / 5 * 100%);"
-							>{{data.skills.computer.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="crafts">Crafts</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.crafts.value}} / 5 * 100%);"
-							>{{data.skills.crafts.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span
-							><a class="roll-pool" data-skill="investigation"
-								>Investigation</a
-							></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.investigation.value}} / 5 * 100%);"
-							>{{data.skills.investigation.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="medicine">Medicine</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.medicine.value}} / 5 * 100%);"
-							>{{data.skills.medicine.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="occult">Occult</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.occult.value}} / 5 * 100%);"
-							>{{data.skills.occult.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="politics">Politics</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.politics.value}} / 5 * 100%);"
-							>{{data.skills.politics.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="science">Science</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.science.value}} / 5 * 100%);"
-							>{{data.skills.science.value}}</span
-						>
-					</div>
-				</div>
+            <div class="attribute">
+                <div class="attribute-label">
+                    <a class="roll-pool" data-skill="com">Composure</a>
+                </div>
+                <div class="attribute-max-bubbles"></div>
+                <div class="attribute-bubbles">
+                    {{#each actor.data.dots.attDots.com as |item id|}}
+                        <div class="attribute-dot">●</div>
+                    {{/each}}
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
 
-				<div class="skill-column">
-					<span class="skill-type">Physical (-1 unskilled)</span>
-					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="athletics">Athletics</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.athletics.value}} / 5 * 100%);"
-							>{{data.skills.athletics.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="brawl">Brawl</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.brawl.value}} / 5 * 100%);"
-							>{{data.skills.brawl.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="drive">Drive</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.drive.value}} / 5 * 100%);"
-							>{{data.skills.drive.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="firearms">Firearms</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.firearms.value}} / 5 * 100%);"
-							>{{data.skills.firearms.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="larceny">Larceny</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.larceny.value}} / 5 * 100%);"
-							>{{data.skills.larceny.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="stealth">Stealth</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.stealth.value}} / 5 * 100%);"
-							>{{data.skills.stealth.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span><a class="roll-pool" data-skill="survival">Survival</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.survival.value}} / 5 * 100%);"
-							>{{data.skills.survival.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="weaponry">Weaponry</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.weaponry.value}} / 5 * 100%);"
-							>{{data.skills.weaponry.value}}</span
-						>
-					</div>
-				</div>
+    <div style="clear: both;"></div>
 
-				<div class="skill-column">
-					<span class="skill-type">Social (-1 unskilled)</span>
-					<div class="skill">
+    <!-- Skills Column -->
+    <div class="mid_column1">
+        <div class="display-skills">
+            <h3>Skills</h3>
+            <div class="skill-section skills">
+                <div class="skill-column">
+                    <span class="skill-type">Mental (-3 unskilled)</span>
+                    <div class="skill">
 						<span
-							><a class="roll-pool" data-skill="animalken">Animal Ken</a></span
-						>
+                        ><a class="roll-pool" data-skill="academics">Academics</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.academics.value}} / 5 * 100%);"
+                        >{{data.skills.academics.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="computer">Computer</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.computer.value}} / 5 * 100%);"
+                        >{{data.skills.computer.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="crafts">Crafts</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.crafts.value}} / 5 * 100%);"
+                        >{{data.skills.crafts.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
 						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.animalken.value}} / 5 * 100%);"
-							>{{data.skills.animalken.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span><a class="roll-pool" data-skill="empathy">Empathy</a></span>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.empathy.value}} / 5 * 100%);"
-							>{{data.skills.empathy.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="expression">Expression</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.expression.value}} / 5 * 100%);"
-							>{{data.skills.expression.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span
-							><a class="roll-pool" data-skill="intimidation"
-								>Intimidation</a
-							></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.intimidation.value}} / 5 * 100%);"
-							>{{data.skills.intimidation.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="persuasion">Persuasion</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.persuasion.value}} / 5 * 100%);"
-							>{{data.skills.persuasion.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span
-							><a class="roll-pool" data-skill="socialize">Socialize</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.socialize.value}} / 5 * 100%);"
-							>{{data.skills.socialize.value}}</span
-						>
-					</div>
-					<div class="skill">
-						<span
-							><a class="roll-pool" data-skill="streetwise">Streetwise</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.streetwise.value}} / 5 * 100%);"
-							>{{data.skills.streetwise.value}}</span
-						>
-					</div>
-					<div class="skill altcolor">
-						<span
-							><a class="roll-pool" data-skill="subterfuge">Subterfuge</a></span
-						>
-						<span
-							class="skill-bubbles"
-							style="--percent: calc({{data.skills.subterfuge.value}} / 5 * 100%);"
-							>{{data.skills.subterfuge.value}}</span
-						>
-					</div>
-				</div>
-			</div>
+                        ><a class="roll-pool" data-skill="investigation"
+                        >Investigation</a
+                        ></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.investigation.value}} / 5 * 100%);"
+                        >{{data.skills.investigation.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="medicine">Medicine</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.medicine.value}} / 5 * 100%);"
+                        >{{data.skills.medicine.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="occult">Occult</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.occult.value}} / 5 * 100%);"
+                        >{{data.skills.occult.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="politics">Politics</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.politics.value}} / 5 * 100%);"
+                        >{{data.skills.politics.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="science">Science</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.science.value}} / 5 * 100%);"
+                        >{{data.skills.science.value}}</span
+                        >
+                    </div>
+                </div>
 
-			<div class="specializations">
-				<div class="specializations-title">
-					<span>Specializations</span>
-				</div>
-				<span>
+                <div class="skill-column">
+                    <span class="skill-type">Physical (-1 unskilled)</span>
+                    <div class="skill">
+						<span
+                        ><a class="roll-pool" data-skill="athletics">Athletics</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.athletics.value}} / 5 * 100%);"
+                        >{{data.skills.athletics.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="brawl">Brawl</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.brawl.value}} / 5 * 100%);"
+                        >{{data.skills.brawl.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="drive">Drive</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.drive.value}} / 5 * 100%);"
+                        >{{data.skills.drive.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="firearms">Firearms</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.firearms.value}} / 5 * 100%);"
+                        >{{data.skills.firearms.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="larceny">Larceny</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.larceny.value}} / 5 * 100%);"
+                        >{{data.skills.larceny.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="stealth">Stealth</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.stealth.value}} / 5 * 100%);"
+                        >{{data.skills.stealth.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+                        <span><a class="roll-pool" data-skill="survival">Survival</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.survival.value}} / 5 * 100%);"
+                        >{{data.skills.survival.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="weaponry">Weaponry</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.weaponry.value}} / 5 * 100%);"
+                        >{{data.skills.weaponry.value}}</span
+                        >
+                    </div>
+                </div>
+
+                <div class="skill-column">
+                    <span class="skill-type">Social (-1 unskilled)</span>
+                    <div class="skill">
+						<span
+                        ><a class="roll-pool" data-skill="animalken">Animal Ken</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.animalken.value}} / 5 * 100%);"
+                        >{{data.skills.animalken.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+                        <span><a class="roll-pool" data-skill="empathy">Empathy</a></span>
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.empathy.value}} / 5 * 100%);"
+                        >{{data.skills.empathy.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+						<span
+                        ><a class="roll-pool" data-skill="expression">Expression</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.expression.value}} / 5 * 100%);"
+                        >{{data.skills.expression.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+						<span
+                        ><a class="roll-pool" data-skill="intimidation"
+                        >Intimidation</a
+                        ></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.intimidation.value}} / 5 * 100%);"
+                        >{{data.skills.intimidation.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+						<span
+                        ><a class="roll-pool" data-skill="persuasion">Persuasion</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.persuasion.value}} / 5 * 100%);"
+                        >{{data.skills.persuasion.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+						<span
+                        ><a class="roll-pool" data-skill="socialize">Socialize</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.socialize.value}} / 5 * 100%);"
+                        >{{data.skills.socialize.value}}</span
+                        >
+                    </div>
+                    <div class="skill">
+						<span
+                        ><a class="roll-pool" data-skill="streetwise">Streetwise</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.streetwise.value}} / 5 * 100%);"
+                        >{{data.skills.streetwise.value}}</span
+                        >
+                    </div>
+                    <div class="skill altcolor">
+						<span
+                        ><a class="roll-pool" data-skill="subterfuge">Subterfuge</a></span
+                        >
+                        <span
+                                class="skill-bubbles"
+                                style="--percent: calc({{data.skills.subterfuge.value}} / 5 * 100%);"
+                        >{{data.skills.subterfuge.value}}</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="specializations">
+                <div class="specializations-title">
+                    <span>Specializations</span>
+                </div>
+                <span>
 					{{data.details.specialties.specialty1.value}},
-					{{data.details.specialties.specialty2.value}},
-					{{data.details.specialties.specialty3.value}}
+                    {{data.details.specialties.specialty2.value}},
+                    {{data.details.specialties.specialty3.value}}
 				</span>
-			</div>
-		</div>
-	</div>
-	<!-- End Skills Column -->
+            </div>
+        </div>
+    </div>
+    <!-- End Skills Column -->
 
-	<!-- Merits + Vamp / Wolf / Mage specific traits column -->
-	<div class="mid_column2">
-		<!-- If this is a Vampire sheet, then... -->
-		{{#ifEquals this.actor.data.splatSelect.value "vampire"}}
-		<div class="display-disciplines">
-			<h3>Disciplines</h3>
-			<div class="items">
-				<ol class="items-list">
-					{{#each actor.data.inventory.disciplines as |item id|}}
-					<li class="item flexrow" data-item-id="{{item._id}}">
-						<h4 class="item-name">{{item.name}}</h4>
-					</li>
-					{{/each}}
-				</ol>
-			</div>
-			<h3>Devotions</h3>
-			<div class="items">
-				<ol class="items-list">
-					{{#each actor.data.inventory.devotions as |item id|}}
-					<li class="item flexrow" data-item-id="{{item._id}}">
-						<h4 class="item-name">{{item.name}}</h4>
-					</li>
-					{{/each}}
-				</ol>
-			</div>
-		</div>
-		{{/ifEquals}}
-		<!-- End -->
+    <!-- Merits + Vamp / Wolf / Mage specific traits column -->
+    <div class="mid_column2">
+        <!-- If this is a Vampire sheet, then... -->
+        {{#ifEquals this.actor.data.splatSelect.value "vampire"}}
+            <div class="display-disciplines">
+                <h3>Disciplines</h3>
+                <div class="items">
+                    <ol class="items-list">
+                        {{#each actor.data.inventory.disciplines as |item id|}}
+                            <li class="item flexrow" data-item-id="{{item._id}}">
+                                <h4 class="item-name">{{item.name}}</h4>
+                            </li>
+                        {{/each}}
+                    </ol>
+                </div>
+                <h3>Devotions</h3>
+                <div class="items">
+                    <ol class="items-list">
+                        {{#each actor.data.inventory.devotions as |item id|}}
+                            <li class="item flexrow" data-item-id="{{item._id}}">
+                                <h4 class="item-name">{{item.name}}</h4>
+                            </li>
+                        {{/each}}
+                    </ol>
+                </div>
+            </div>
+        {{/ifEquals}}
+        <!-- End -->
 
-		<div class="display-merits">
-			<h3>Merits</h3>
-			<div class="items">
-				<ol class="items-list">
-					{{#each actor.data.inventory.merits as |item id|}}
-					<li class="item flexrow" data-item-id="{{item._id}}">
-						<h4 class="item-name">{{item.name}}</h4>
-					</li>
-					{{/each}}
-				</ol>
-			</div>
-		</div>
-	</div>
-	<!-- End Merits/Whatever Column -->
+        <div class="display-merits">
+            <h3>Merits</h3>
+            <div class="items">
+                <ol class="items-list">
+                    {{#each actor.data.inventory.merits as |item id|}}
+                        <li class="item flexrow" data-item-id="{{item._id}}">
+                            <h4 class="item-name">{{item.name}}</h4>
+                        </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- End Merits/Whatever Column -->
 
-	<div class="mid_column3">
-		<div class="display-other">
-			<div class="resource">
-				<h3>Health</h3>
-				<div class="resource">
-					{{#each actor.data.dots.hpCurrentDots as |item id|}}
-					<span>⚫</span>
-					{{/each}}<br />
-					{{#each actor.data.dots.hpMaxDots as |item id|}}
-					<span>⚫</span>
-					{{/each}}
-				</div>
-				<br />
-				<input
-					type="number"
-					name="data.advantages.hp.value"
-					value="{{data.advantages.hp.value}}"
-					data-dtype="Number"
-				/>
-				<span> / </span>
-				<input
-					type="number"
-					name="data.advantages.hp.max"
-					value="{{data.advantages.hp.max}}"
-					data-dtype="Number"
-				/>
-			</div>
+    <div class="mid_column3">
+        <div class="display-other">
+            <div class="resource">
+                <h3>Health</h3>
+                <div class="resource">
+                    {{#each actor.data.dots.hpCurrentDots as |item id|}}
+                        <span>⚫</span>
+                    {{/each}}<br/>
+                    {{#each actor.data.dots.hpMaxDots as |item id|}}
+                        <span>⚫</span>
+                    {{/each}}
+                </div>
+                <br/>
+                <input
+                        type="number"
+                        name="data.advantages.hp.value"
+                        value="{{data.advantages.hp.value}}"
+                        data-dtype="Number"
+                />
+                <span> / </span>
+                <input
+                        type="number"
+                        name="data.advantages.hp.max"
+                        value="{{data.advantages.hp.max}}"
+                        data-dtype="Number"
+                />
+            </div>
 
-			<div class="resource">
-				<h3>Willpower</h3>
-				{{#each actor.data.dots.wpCurrentDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}<br />
-				{{#each actor.data.dots.wpMaxDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}
-				<br />
-				<input
-					type="number"
-					name="data.advantages.wp.value"
-					value="{{data.advantages.wp.value}}"
-					data-dtype="Number"
-				/>
-				<span> / </span>
-				<input
-					type="number"
-					name="data.advantages.wp.max"
-					value="{{data.advantages.wp.max}}"
-					data-dtype="Number"
-				/>
-			</div>
+            <div class="resource">
+                <h3>Willpower</h3>
+                {{#each actor.data.dots.wpCurrentDots as |item id|}}
+                    <span>⚫</span>
+                {{/each}}<br/>
+                {{#each actor.data.dots.wpMaxDots as |item id|}}
+                    <span>⚫</span>
+                {{/each}}
+                <br/>
+                <input
+                        type="number"
+                        name="data.advantages.wp.value"
+                        value="{{data.advantages.wp.value}}"
+                        data-dtype="Number"
+                />
+                <span> / </span>
+                <input
+                        type="number"
+                        name="data.advantages.wp.max"
+                        value="{{data.advantages.wp.max}}"
+                        data-dtype="Number"
+                />
+            </div>
 
-			<div class="resource">
-				<h3>Integrity</h3>
-				{{#each actor.data.dots.integDots as |item id|}}
-				<span>⚫</span>
-				{{/each}}<br />
-				<br />
-				<input
-					type="number"
-					name="data.advantages.integrity.value"
-					value="{{data.advantages.integrity.value}}"
-					data-dtype="Number"
-				/>
-				<span> / </span>
-				<input
-					type="number"
-					name="data.advantages.integrity.max"
-					value="{{data.advantages.integrity.max}}"
-					data-dtype="Number"
-				/>
-			</div>
-		</div>
+            <div class="resource">
+                <h3>Integrity</h3>
+                {{#each actor.data.dots.integDots as |item id|}}
+                    <span>⚫</span>
+                {{/each}}<br/>
+                <br/>
+                <input
+                        type="number"
+                        name="data.advantages.integrity.value"
+                        value="{{data.advantages.integrity.value}}"
+                        data-dtype="Number"
+                />
+                <span> / </span>
+                <input
+                        type="number"
+                        name="data.advantages.integrity.max"
+                        value="{{data.advantages.integrity.max}}"
+                        data-dtype="Number"
+                />
+            </div>
+        </div>
 
-		<div style="clear: both;"></div>
-	</div>
+        <div style="clear: both;"></div>
+    </div>
 
-	<div style="clear: both;"></div>
+    <div style="clear: both;"></div>
 
-	<hr />
+    <hr/>
 </div>
